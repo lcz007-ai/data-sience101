@@ -1,0 +1,26 @@
+# ---------------------------------------------------------------------------
+# 现代环境依赖（推荐）：Python 3.9+
+# 运行本仓库 notebook 前，请先按 README「已知问题」一节修改废弃的导入语句，
+# 即：sklearn.cross_validation → sklearn.model_selection
+#     sklearn.learning_curve   → sklearn.model_selection
+#     sklearn.datasets.samples_generator → sklearn.datasets
+#     IPython.html.widgets     → ipywidgets
+# 对应 conda 环境见 environment.yml；安装：pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# 科学计算与绘图（8 个 notebook 全部用到）
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+
+# 算法本体（8 个 notebook 全部用到）
+scikit-learn>=1.1
+
+# Jupyter 运行环境
+jupyterlab>=4.0
+
+# notebook 中交互式参数滑块的现代实现（random-forest / svm / validation 使用）
+ipywidgets>=8.0
+
+# 注意：本仓库并未使用 pandas —— 仓库简介里的 “padas” 是笔误，如需自行扩展可另装。

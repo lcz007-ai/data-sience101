@@ -1,0 +1,25 @@
+# conda 环境（现代 Python 3，推荐；配合 README「快速开始」使用）
+#
+#   conda env create -f environment.yml
+#   conda activate ds101
+#   jupyter lab
+#
+# 注意：notebook 仍是 Python 2 写法，运行前需按 README「已知问题」修改废弃导入
+#      （sklearn.cross_validation / learning_curve / datasets.samples_generator /
+#        IPython.html.widgets）。想完全不改代码运行，请改用 Python 2.7 的旧环境。
+name: ds101
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  # 科学计算与绘图
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  # 算法本体
+  - scikit-learn
+  # Jupyter 与交互控件
+  - jupyterlab
+  - ipywidgets
+  - pip

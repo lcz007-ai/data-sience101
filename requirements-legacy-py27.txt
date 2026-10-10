@@ -1,0 +1,25 @@
+# ---------------------------------------------------------------------------
+# 原样运行版依赖（Legacy）：Python 2.7
+#
+# 用法：不动 notebook 里任何一行代码，配合老版本库运行。
+# 版本来源：各库仍支持 Python 2.7 的最后版本 / notebook 写作年代（2015-2016）的版本。
+# 注意：本机未做 2.7 环境实测，仅按“最后一个支持 py2.7 的版本 + 被移除 API 的
+#      存活范围”选版；若某个版本装不上，用 conda 环境（见 README）更省事。
+#
+# 为什么必须锁老版本：
+#   scikit-learn 0.18 起 cross_validation / learning_curve / GMM 陆续废弃，
+#   0.20 起被移除 —— 而 notebook 里用的正是这些老 API。
+#   IPython 4.0 起 html.widgets 被拆到独立的 ipywidgets 包。
+# ---------------------------------------------------------------------------
+
+numpy==1.16.6          # Python 2.7 的最后一个版本
+scipy==1.2.3           # Python 2.7 的最后一个版本
+matplotlib==2.2.5      # Python 2.7 的最后一个版本
+seaborn==0.7.1         # 与本仓库 sns.set() / seaborn; 写法同期的版本
+scikit-learn==0.17.1   # 保留 sklearn.cross_validation / learning_curve / mixture.GMM
+notebook==5.7.8        # Python 2.7 上可用的最后一个 notebook
+ipython==3.2.3         # IPython.html.widgets 需要 IPython 3.x
+ipywidgets==4.1.1      # IPython 3.x 配套的 widgets
+
+# 说明：Python 2.7 已于 2020 年 EOL，pip 需用 https://bootstrap.pypa.io/pip/2.7/get-pip.py 安装；
+# 相比之下用 conda（README 推荐的 Miniconda）建 2.7 环境更省事。
